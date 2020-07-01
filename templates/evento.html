@@ -2,28 +2,27 @@
 
 {% block content %}
 
-<h3>Evento</h3>
-<form action="submit" method="POST">{% csrf_token %}ma
-    <div class="form-group">
-        <label>Título: </label>
-        <br>
-        <input class="form-control form-control-lg" type="text" name="titulo" size="23">
-        <br>
-        <label>Data do Evento: </label>
-        <br>
-        <input type="datetime-local" name="data_evento">
-        <br>
-        <label>Descrição: </label>
-        <br>
+
+<form action="submit" method="POST">{% csrf_token %}
+    <div class="container-fluid">
+        <h3>Evento</h3>
+        <div class="form-group">
+            <label>Título: </label>
+            <input class="form-control form-control-lg" type="text" name="titulo" size="23">
+        </div>
+        <div class="form-group">
+            <label>Data do Evento: </label>
+            <input type="datetime-local" name="data_evento">
+        </div>
+        <div class="form-group">
+            <label>Descrição: </label>
+            <textarea class="form-control" name="descricao" rows="5"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Salvar</button>
+        <a href="/">
+            <button class="btn btn-secondary" type="button">Cancelar</button>
+        </a>
     </div>
-    <div class="form-group">
-        <textarea class="form-control" name="descricao" rows="5" cols="10"></textarea>
-    </div>
-    <br><br>
-    <button class="btn btn-primary" type="submit">Salvar</button>
-    <a href="/">
-        <button class="btn btn-secondary" type="button">Cancelar</button>
-    </a>
 </form>
 
 

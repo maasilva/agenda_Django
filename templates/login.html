@@ -2,17 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Agenda</title>
 </head>
 <body>
-<h1>Login</h1>
+<nav class="navbar navbar-dark bg-primary">
+    <span class="navbar-brand mb-0 h1">Agenda</span>
+</nav>
+
+
 <form action="submit" method="POST">{% csrf_token %}
-    <div align="center">
-        <label>Usuário:</label>
-        <input type="text" name="username">
-        <label>Password:</label>
-        <input type="password" name="password">
-        <button type="submit">Entrar</button>
+    <div class="container-fluid">
+        <h3>Login</h3>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label>Usuário: </label>
+                <input type="text" class="form-control" name="username">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Password:</label>
+                <input type="password" class="form-control" name="password">
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Entrar</button>
     </div>
 </form>
 
@@ -24,4 +37,9 @@
 {% endfor %}
 
 </body>
+<footer>
+    <div class="card-footer text-muted fixed-bottom">
+        <p>Desenvolvido por Marcos Antonio</p>
+    </div>
+</footer>
 </html>
