@@ -1,3 +1,6 @@
 *.pyc
 .idea
 agenda/__pycache__/*
+core/__pycache__/views.cpython-38.pyc
+agenda/__pycache__/urls.cpython-38.pyc
+
