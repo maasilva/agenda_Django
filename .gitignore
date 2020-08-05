@@ -10,3 +10,5 @@ db.sqlite3
 local_settings.py
 README.md.backup
 .idea
+.idea/agenda.iml
+.idea/misc.xml

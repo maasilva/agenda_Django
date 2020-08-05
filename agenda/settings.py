@@ -26,7 +26,7 @@ SECRET_KEY = '%fnv+-kzy_k9cc!6q#k^=h#)md4dybu6*!k3_d7%90i0htz@1u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['eventonet.herokuapp.com']
 
 
 # Application definition
