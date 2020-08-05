@@ -1,6 +1,12 @@
 *.pyc
+*.log
+*.pyc
+__pycache__/
+.env
+.venv
+db.sqlite3
+.*_cache
+.vscode
+local_settings.py
+README.md.backup
 .idea
-agenda/__pycache__/*
-core/__pycache__/views.cpython-38.pyc
-agenda/__pycache__/urls.cpython-38.pyc
-
