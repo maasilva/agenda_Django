@@ -1,26 +1,42 @@
 {% extends "model-page.html" %}
 
 {% block content %}
-<div class="container-fluid">
-    <h3>Compromissos</h3>
-    <a href="evento/">
-        <button class="btn btn-primary btn-sm" type="button">Novo Evento</button>
-    </a>
-    <ul style="font-size: 18px">
+
+<h2>Compromissos</h2>
+<a href="evento/">
+    <button class="btn btn-primary" type="button">Novo Evento</button>
+</a>
+<table class="table table-bordered mt-4">
+    <thead>
+        <tr>
+            <th>Evento</th>
+            <th>Data</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody style="font-size: 18px">
+
         {% for evento in eventos %}
-        <li>
-            <div style={% if evento.get_evento_atrasado %}
-            "color:red"
-            {% endif %}>
-            {{ evento.titulo }} - {{ evento.get_data_evento }}
-            <a href="evento/?id={{ evento.id }}">
-                <button type="button" class="btn btn-primary btn-sm">Editar</button>
-            </a>
-            <a href="evento/delete/{{ evento.id }}/">
-                <button type="button" class="btn btn-secondary btn-sm">Excluir</button>
-            </a>
-        </li>
+        <tr>
+            <td>
+                <div style={% if evento.get_evento_atrasado %} "color:red" {% endif %}>
+                    {{ evento.titulo }}
+                </div>
+            </td>
+            <td>{{ evento.get_data_evento }}</td>
+            <td>
+                <a href="evento/?id={{ evento.id }}">
+                    <button type="button" class="btn btn-primary">Editar</button>
+                </a>
+                <a href="evento/delete/{{ evento.id }}/">
+                    <button type="button" class="btn btn-secondary">Excluir</button>
+                </a>
+            </td>
+        </tr>
         {% endfor %}
-    </ul>
-</div>
+
+
+    </tbody>
+</table>
+
 {% endblock %}

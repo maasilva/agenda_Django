@@ -5,7 +5,7 @@
 
 <form action="submit" method="POST">{% csrf_token %}
     <div class="container-fluid">
-        <h3>Evento</h3>
+        <h2>Evento</h2>
         <div class="form-group">
             <label>Título: </label>
             <input type="number" name="id_evento" value="{{ evento.id }}" hidden>
@@ -19,9 +19,9 @@
             <label>Descrição: </label>
             <textarea class="form-control" name="descricao" rows="3">{{ evento.descricao }}</textarea>
         </div>
-        <button class="btn btn-primary btn-sm" type="submit">Salvar</button>
+        <button class="btn btn-primary" type="submit">Salvar</button>
         <a href="/">
-            <button class="btn btn-secondary btn-sm" type="button">Cancelar</button>
+            <button class="btn btn-secondary" type="button">Cancelar</button>
         </a>
     </div>
 </form>
