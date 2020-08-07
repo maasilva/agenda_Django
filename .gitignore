@@ -12,3 +12,4 @@ README.md.backup
 .idea
 .idea/agenda.iml
 .idea/misc.xml
+db.sqlite3
